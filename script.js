@@ -46,6 +46,12 @@ const apiKey = "e373fd7ef84105f7d78ed61989b56f8e";
 
         searchBtn.addEventListener("click",()=>{
             checkWeather(searchBox.value);
+        });
+
+        searchBox.addEventListener("keypress",(e)=>{
+            if(e.key === 'Enter' || e.keyCode == 13){
+                checkWeather(searchBox.value);
+            }
         })
 
         
